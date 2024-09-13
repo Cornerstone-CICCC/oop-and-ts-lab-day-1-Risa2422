@@ -79,10 +79,11 @@ class Bird extends Animal {
     } else if (this.energy <= 0) {
       console.log(`${target.name} wins!`);
       Animal.remainingAnimals -= 1;
-    } else if (target.energy == 0 && target.name == 0) {
-      console.log("Both animals do not have this.energy");
+    } else if (target.energy == 0 && this.energy == 0) {
+      console.log("Both animals do not have energy");
       Animal.remainingAnimals -= 2;
     }
+
     this.energy = this.energy - 20;
     target.energy -= 20;
   }
@@ -115,8 +116,8 @@ class Mammal extends Animal {
     } else if (this.energy <= 0) {
       console.log(`${target.name} wins!`);
       Animal.remainingAnimals -= 1;
-    } else if (target.energy == 0 && target.name == 0) {
-      console.log("Both animals do not have this.energy");
+    } else if (target.energy == 0 && this.energy == 0) {
+      console.log("Both animals do not have energy");
       Animal.remainingAnimals -= 2;
     }
 
@@ -151,8 +152,8 @@ class Reptile extends Animal {
     } else if (this.energy <= 0) {
       console.log(`${target.name} wins!`);
       Animal.remainingAnimals -= 1;
-    } else if (target.energy == 0 && target.name == 0) {
-      console.log("Both animals do not have this.energy");
+    } else if (target.energy == 0 && this.energy == 0) {
+      console.log("Both animals do not have energy");
       Animal.remainingAnimals -= 2;
     }
 
